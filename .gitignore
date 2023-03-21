@@ -1,7 +1,7 @@
 # compiled output
 /dist
 /node_modules
-
+yarn.lock
 # Logs
 logs
 *.log
@@ -14,6 +14,7 @@ lerna-debug.log*
 # OS
 .DS_Store
 .env
+
 
 # Tests
 /coverage
