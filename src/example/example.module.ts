@@ -1,9 +1,9 @@
-import { Module } from '@nestjs/common';
+import { CacheModule, Module } from '@nestjs/common';
 import { ExampleController } from './example.controller';
 import { ExampleService } from './example.service';
 
 @Module({
-  imports: [],
+  imports: [CacheModule.register()],
   controllers: [ExampleController],
   providers: [ExampleService],
 })
