@@ -11,8 +11,8 @@
     "start": "nest start",
     "generate": "nest g co $name & nest g s $name & nest g mo $name",
     "start:dev": "nest start --watch",
+    "postinstall": "husky install & patch-package",
     "generate:all": "nest g co && nest g s",
-    "postinstall": "husky install",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -36,6 +36,7 @@
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.2",
     "passport-jwt": "^4.0.1",
+    "patch-package": "^6.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
