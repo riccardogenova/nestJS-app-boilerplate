@@ -21,7 +21,7 @@ export class ExampleController {
   @Get('cache')
   async getCache() {
     const element = await this.cacheManager.get('example');
-    if (!!element) return element;
-    else return 'Cache clear';
+    if (element) {return element;}
+    else {return 'Cache clear';}
   }
 }
