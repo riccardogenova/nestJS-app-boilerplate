@@ -1,8 +1,11 @@
+<!-- @format -->
+
 ## Used stacks
 
 <p >
   <a href="http://nestjs.com/" target="blank" style="margin-right:2px" ><img src="https://nestjs.com/img/logo-small.svg" width="50" alt="Nest Logo" /></a>
-  <a href="https://nodejs.org/en/about/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/node.js.svg" width="50" alt="Node Logo"/></a>
+    <a href="https://nodejs.org/en/about/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/node.js.svg" width="50" alt="Node Logo"/></a>
+      <a href="https://www.docker.com/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/docker.svg" width="50" alt="Docker Logo"/></a>
   <a href="https://www.mongodb.com/" target="blank"style="margin-right:2px" ><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/mongodb.svg" width="50" alt="MongoDB Logo"/></a>
 <a href="https://jestjs.io/" target="blank"style="margin-right:2px" ><img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="42" alt="Jest Logo"/></a>
 <a href="https://eslint.org/" target="blank"style="margin:2px"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/ESLint_logo.svg" width="56" alt="Eslint Logo"/></a>
@@ -41,6 +44,16 @@ For more info watch the README.md files inside each folder.
 
 ```bash
 $ yarn | $ yarn install
+```
+
+## Build - Docker
+
+```bash
+# build
+$ yarn build
+
+# Docker build
+$ docker build --tag <tagname>
 ```
 
 ## Running the app
