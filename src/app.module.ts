@@ -19,7 +19,7 @@ import { ExampleService } from './models/example/example.service';
     // MongooseModule.forRoot(process.env.APP_MONGO_PATH),
     CacheModule.register(),
     JwtModule.registerAsync(jwtConfig),
-  ],
+   ],
   controllers: [AppController, ExampleController],
   providers: [AppService, ExampleService],
 })
