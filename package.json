@@ -25,6 +25,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@nestjs-modules/mailer": "^1.8.1",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/jwt": "^10.0.2",
@@ -35,6 +36,8 @@
     "dotenv": "^16.0.3",
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.2",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.9.1",
     "passport-jwt": "^4.0.1",
     "patch-package": "^6.5.1",
     "reflect-metadata": "^0.1.13",
