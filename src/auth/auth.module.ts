@@ -1,10 +1,13 @@
+/** @format */
+
 import { Module } from '@nestjs/common';
-import { UsersModule } from 'src/models/users/users.module';
+
 import { PassportModule } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { LocalStrategy } from './local.strategy';
 import { JwtStrategy } from './jwt.strategy';
 import { JwtModule } from '@nestjs/jwt';
+import { UsersModule } from 'src/models/users/users.module';
 import appConfig from 'src/common/app.config';
 
 @Module({
