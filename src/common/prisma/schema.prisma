@@ -1,30 +1,35 @@
-datasource db {
-    provider = "mongodb"
-    url = env("DATABASE_URL")
-}
+// datasource db {
+//     provider = "mongodb"
+//     url = env("DATABASE_URL")
+// }
+
+// generator client {
+//     provider = "prisma-client.js"
+// }
+
+// model Example {
+//     id String @id @default(auto()) @map("_id") @db.ObjectId
+//     name String @unique
+//     public Boolean @default(false)
+//     userId String @db.ObjectId
+// }
+
 
 generator client {
-    provider = "prisma-client.js"
+  provider = "prisma-client-js"
 }
 
-model Example {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
-    name String @unique
-    public Boolean @default(false)
-    userId String @db.ObjectId
-    user User @relation(fields: [userId], references: [id])
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model Post {
-  id     String @id @default(auto()) @map("_id") @db.ObjectId
-  title  String
-  userId String @db.ObjectId
-  user   User   @relation(fields: [userId], references: [id])
-}
-
-model User {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  email String
-  post Post[]
-  example Example[]
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String   @unique
+  description String?
+  body        String
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
