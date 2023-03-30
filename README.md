@@ -107,6 +107,30 @@ $ yarn run test
 $ yarn run test:e2e
 ```
 
+## Configuration VSCode
+
+- Install Prettier extension
+- Go to to File -> Settings and search theme
+- Click on Edit in settings.json
+- Add this entry on opened file settings.json and save it.
+
+```
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+    "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+```
+
 ## Stay in touch
 
 - Author - [Riccardo Genova](https://github.com/riccardogenova-bitrocketdev)
