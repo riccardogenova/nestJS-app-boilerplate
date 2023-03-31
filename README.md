@@ -1,11 +1,12 @@
 <!-- @format -->
 
-## Used stacks
+# Stack
 
 <p >
   <a href="http://nestjs.com/" target="blank" style="margin-right:2px" ><img src="https://nestjs.com/img/logo-small.svg" width="50" alt="Nest Logo" /></a>
     <a href="https://nodejs.org/en/about/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/node.js.svg" width="50" alt="Node Logo"/></a>
       <a href="https://www.docker.com/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/docker.svg" width="50" alt="Docker Logo"/></a>
+           <a href="https://www.docker.com/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/postgresql.svg" width="50" alt="Postgres Logo"/></a>
   <a href="https://www.mongodb.com/" target="blank"style="margin-right:2px" ><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/mongodb.svg" width="50" alt="MongoDB Logo"/></a>
 <a href="https://jestjs.io/" target="blank"style="margin-right:2px" ><img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="42" alt="Jest Logo"/></a>
 <a href="https://swagger.io/" target="blank"style="margin-right:2px" ><img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" width="50" alt="Swagger Logo"/></a>
@@ -18,11 +19,11 @@
 
 ## Description
 
-[NestJS Boilerplate](https://github.com/bitRocket-dev/nestJS-app-boilerplate) contains the essential tools for new nest/mongo projects.
+[NestJS Boilerplate](https://github.com/bitRocket-dev/nestJS-app-boilerplate) contains the essential tools for nest/mongo or nest/postgres projects.
 
-## Treefolder
+# Treefolder
 
-```
+```bash
 ├── dist
 └── src/
     ├── auth
@@ -41,13 +42,39 @@
 
 For more info watch the README.md files inside each folder.
 
-## Installation
+# Installation
 
 ```bash
-$ yarn | $ yarn install
+# Setup
+$ bash config.sh
+
+────────────────────────────────────────────────
+# MongoDB
+
+- Set DATABASE_URL env:
+    DATABASE_URL="mongodb://dbadmin:{username}:{password}@localhost:27017/test"
+
+- Open "main.ts" and add the mongo connection string before bootstrap:
+    mongoose.connect(process.env.DATABASE_URL);
+
+- Import MongooseModule into "app.module.ts":
+    imports: [ MongooseModule.forRoot(process.env.DATABASE_URL)]
+
+────────────────────────────────────────────────
+# Postgres
+
+- Set DATABASE_URL env:
+    DATABASE_URL="postgres://myuser:mypassword@localhost:5432/test"
+
+- Set all DB envs:
+    DB_HOST,
+    DB_PORT,
+    DB_USERNAME,
+    DB_PASSWORD,
+    DB_NAME
 ```
 
-## Build - Docker
+# Build
 
 ```bash
 # build
@@ -69,6 +96,8 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+
+# CLI
 
 ## Nest cli - helpers
 
