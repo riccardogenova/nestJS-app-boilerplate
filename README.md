@@ -8,6 +8,7 @@
       <a href="https://www.docker.com/" target="blank" style="margin-right:2px"><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/docker.svg" width="50" alt="Docker Logo"/></a>
   <a href="https://www.mongodb.com/" target="blank"style="margin-right:2px" ><img src="https://cosmocode-assets.s3.amazonaws.com/stacks/mongodb.svg" width="50" alt="MongoDB Logo"/></a>
 <a href="https://jestjs.io/" target="blank"style="margin-right:2px" ><img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" width="42" alt="Jest Logo"/></a>
+<a href="https://swagger.io/" target="blank"style="margin-right:2px" ><img src="https://seeklogo.com/images/S/swagger-logo-A49F73BAF4-seeklogo.com.png" width="50" alt="Swagger Logo"/></a>
 <a href="https://eslint.org/" target="blank"style="margin:2px"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/ESLint_logo.svg" width="56" alt="Eslint Logo"/></a>
 <a href="https://www.prisma.io/" target="blank"style="margin:5px" ><img src="https://i.pinimg.com/originals/39/b2/e4/39b2e4ad77c23a2c11e5950a7dfa2aec.png" width="45" alt="Prisma Logo"/></a>
 <a href="https://prettier.io/" target="blank"style="margin:2px" ><img src="https://brandslogos.com/wp-content/uploads/images/large/prettier-logo.png" width="50" alt="Prettier Logo"/></a>
@@ -129,6 +130,14 @@ $ yarn run test:e2e
   },
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
+```
+
+## Monitoring
+
+```bash
+# swagger:
+
+${SERVER_URL}/api
 ```
 
 ## Stay in touch
